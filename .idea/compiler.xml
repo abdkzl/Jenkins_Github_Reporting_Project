@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <build-job name="CompilerConfiguration">
+  <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -10,10 +10,10 @@
         <module name="Jenkins_Github_Reporting_Project" />
       </profile>
     </annotationProcessing>
-  </build-job>
-  <build-job name="JavacSettings">
+  </component>
+  <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Jenkins_Github_Reporting_Project" options="" />
     </option>
-  </build-job>
+  </component>
 </project>

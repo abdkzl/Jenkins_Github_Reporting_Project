@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <build-job name="ExternalStorageConfigurationManager" enabled="true" />
-  <build-job name="MavenProjectsManager">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-  </build-job>
-  <build-job name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="12" project-jdk-type="JavaSDK">
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="12" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
-  </build-job>
+  </component>
 </project>
