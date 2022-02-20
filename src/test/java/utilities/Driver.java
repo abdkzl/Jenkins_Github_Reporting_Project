@@ -1,43 +1,68 @@
 package utilities;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
 
+
 public class Driver {
 
-    public static WebDriver driver;
+
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    private Driver(){}
 
     public static WebDriver getDriver(){
 
-        if(driver == null){
+        //google
+
+        //firefox
+
+
+        if(driver.get() == null){
             switch (ConfigReader.getProperty("browser")){
-                // chrome // firefox
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver.set( new ChromeDriver());
+                    driver.get();
+                    break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
+                    driver.set(new FirefoxDriver());
                     break;
                 case "ie":
                     WebDriverManager.iedriver().setup();
-                    driver = new InternetExplorerDriver();
+                    driver.set(new InternetExplorerDriver());
                     break;
-                default:
+                case "safari":
+                    WebDriverManager.getInstance(SafariDriver.class).setup();
+                    driver.set( new SafariDriver());
+                    break;
+                case "headless-chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driver.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
                     break;
             }
         }
-        driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        return driver;
+        driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get().manage().window().maximize();
+        return driver.get();
     }
+
     public static void closeDriver(){
-        if(driver != null){
-            driver.quit();
-            driver = null;
-        }
+
+            driver.get().quit();  // driver'ı kapat
+            driver.remove(); // driver'ı hafızadan temizle.
+
     }
 }
+
+
+
+
