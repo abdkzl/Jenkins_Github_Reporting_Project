@@ -29,7 +29,7 @@ public class Driver {
             switch (ConfigReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver.set( new ChromeDriver());
+                    driver.set(new ChromeDriver());
                     driver.get();
                     break;
                 case "firefox":
