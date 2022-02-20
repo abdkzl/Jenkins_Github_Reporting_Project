@@ -20,7 +20,7 @@ public class TestBase {
     public void setup() {
          Driver.getDriver().get("https://www.google.com/");
         Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 

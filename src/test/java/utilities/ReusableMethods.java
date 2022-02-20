@@ -121,17 +121,17 @@ public class ReusableMethods {
     }
 
     //======Fluent Wait====//
-    public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
-        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
-                .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
-                .ignoring(NoSuchElementException.class);
-        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
-            public WebElement apply(WebDriver driver) {
-                return webElement;
-            }
-        });
-        return element;
-    }
+//    public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
+//        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
+//                .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)
+//                .ignoring(NoSuchElementException.class);
+//        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+//            public WebElement apply(WebDriver driver) {
+//                return webElement;
+//            }
+//        });
+//        return element;
+//    }
 
     //======== Slider Ayarlama =========//
     public static void setSliderBall(WebElement element, int sliderStartPoint, int target) {
