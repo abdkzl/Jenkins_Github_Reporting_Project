@@ -1,38 +1,47 @@
 package Tests;
 
-import junitCalismalari.SmokeRegressionTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import utilities.Driver;
+import utilities.TestBase;
 
 public class Test1Pass extends TestBase {
-    @BeforeEach
-    public void url(){ Driver.getDriver().get("https://www.google.com/");}
 
 
 
-    @SmokeRegressionTest
+//    @AfterEach
+//    public void takescreenshot(){
+//        ReusableMethods.takeScreenshot();
+//    }
+
+
+
+    @Test
     public void pass1() {
 
-        Assertions.assertEquals("https://www.google.com/", Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals("https://www.dfdsgoogle.com/",Driver.getDriver().getCurrentUrl());
     }
 
-    @SmokeRegressionTest
+
+    @Test
     public void pass2() {
 
-        Assertions.assertEquals("https://www.gooqqgle.com/",Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals("https://wwfffw.google.com/", Driver.getDriver().getCurrentUrl());
     }
 
-    @SmokeRegressionTest
+
+    @Test
     public void pass3() {
 
-        Assertions.assertEquals("https://www.google.com/",Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals("https://wfffffww.google.com/", Driver.getDriver().getCurrentUrl());
     }
 
-    @SmokeRegressionTest
+
+    @Test
     public void pass4() {
 
-        Assertions.assertEquals("https://www.goodgle.com/",Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals("https://www.googlfffe.com/",Driver.getDriver().getCurrentUrl());
     }
 
 

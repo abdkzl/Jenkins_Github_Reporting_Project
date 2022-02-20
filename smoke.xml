@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="smoke test">
+        <groups>
+
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.Test1Fail"/>
+            <class name="Tests.Test1Pass"/>
+<!--            <class name="test.UITests.AdminPageTest"/>-->
+<!--            <class name="test.test.MobileTest.AddItemsToCartTest"/>-->
+            <!--
+            <class name="Tests.UITests.ZipCodeTest"/>
+            <class name="Tests.UITests.EventsTest"/>
+            <class name="Tests.UITests.EventRegistrationTest"/>
+            <class name="Tests.UITests.SellerProductAddTest"/>
+            <class name="Tests.UITests.AboutUsTest"/>
+            <class name="Tests.UITests.HomePageDesignTest"/>
+            <class name="Tests.UITests.ContactUsTest"/>
+            <class name="Tests.UITests.RegisterFunctionalityTest"/>
+
+
+            <class name="Tests.UITests.DeliveryTest"/>
+             <class name="Tests.UITests.AddressConfigurationTest"/>
+             <class name="Tests.UITests.CartModuleTest"/>
+             <class name="Tests.UITests.ChatBoxTest"/>
+             <class name="Tests.UITests.CheckoutControlTest"/>
+             <class name="Tests.UITests.EventAddressTest"/>
+             <class name="Tests.UITests.EventCreationTest"/>
+             <class name="Tests.UITests.EventRegistrationTest"/>
+             <class name="Tests.UITests.EventsAttendedTest"/>
+             <class name="Tests.UITests.EventsOnNavBarTest"/>
+             <class name="Tests.UITests.EventsOrganizeTest"/>
+             <class name="Tests.UITests.EventsScheduledTest"/>
+             <class name="Tests.UITests.LoginFunctionalityTest"/>
+             <class name="Tests.UITests.MailConfirmationTest"/>
+             <class name="Tests.UITests.NotificationFunctionalityTest"/>
+             <class name="Tests.UITests.OrderVerificationBySellerTest"/>
+             <class name="Tests.UITests.PaypalPaymentTest"/>
+             <class name="Tests.UITests.PhoneButtonTest"/>
+             <class name="Tests.UITests.SellerProductAddTest"/>
+             <class name="Tests.UITests.SmokeE2ETest"/>
+             <class name="Tests.UITests.SupportUsFunctionsTest"/>
+             <class name="Tests.UITests.TradeActivationTest"/>
+             <class name="Tests.UITests.TradeFunctionsTestingTest">
+  -->
+
+        </classes>
+
+    </test>
+</suite>
+
