@@ -10,10 +10,8 @@
         <module name="Jenkins_Github_Reporting_Project" />
       </profile>
     </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Jenkins_Github_Reporting_Project" options="" />
-    </option>
+    <bytecodeTargetLevel>
+      <module name="Jenkins_Github_Reporting_Project" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -6,18 +6,41 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
 
-
+    private static final String FILE_DIRECTORY = "test-output\\Screenshots";
+    private static final String FILE_EXTENSION = ".png";
     protected Actions actions;
     protected WebDriverWait wait;
 
     @BeforeMethod
     public void setup() {
+        // Calling the deleteFile() method over the file
+        // FileCheker() method to check existence for the
+        // file
+
+        // Delete the file with FILE_EXTENSION from
+        // FILE_DIRECTORY using the deleteFile() method s
+        // created above
+        new GFG().deleteFile(FILE_DIRECTORY, FILE_EXTENSION);
+
+        //try {
+
+//            Files.deleteIfExists(Paths.get("test-output/Screenshots/JENKINS DENEME20220220075620.png"));
+//
+//
+//        //(Paths.get("C:\\Users\\abdkz\\IdeaProjects\\CI\\Jenkins_Github_Reporting_Project\\test-output\\Screenshots"));
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
          Driver.getDriver().get("https://www.google.com/");
         Driver.getDriver().manage().window().maximize();
         //Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
