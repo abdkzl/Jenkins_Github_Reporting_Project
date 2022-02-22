@@ -3,6 +3,7 @@ package utilities;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -79,6 +80,9 @@ public class TestBase {
     @AfterMethod
     public void tearDownMethod2() throws IOException {
         ReusableMethods.getScreenshot("JENKINS DENEME");
+        String DestFile = System.getProperty("user.dir") + "job/Jenkins_Github_Reporting_Project/ws/test-output/Screenshots/";
+        Reporter.log("</br><font color='#73a9d0'>***************Screen Of the error****************</font>");
+        Reporter.log("</br><img id='ErrorResult' src='" + DestFile + "' style='width:600px'/>");
     }
 }
 //Deneme
